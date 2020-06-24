@@ -1,0 +1,12 @@
+Step 1.	Download the debian package
+  sudo wget https://repo.zabbix.com/zabbix/5.0/ubuntu/pool/main/z/zabbix-release/zabbix-release_5.0-1+bionic_all.deb
+Step 1. Install the package	
+  sudo dpkg -i zabbix-release_5.0-1+bionic_all.deb
+Step 4 : Update the machine
+  sudo apt update -y
+Step 4. Install the agent	
+  apt-get install zabbix-agent
+Step 5.	Edit the agent configuration file and provide the details.
+  vim /etc/zabbix/zabbix_agentd.conf ----- Add Zabbix server IP in Server, ServerActive and add Hostname.
+Step 6.	Start the agent service
+  /etc/init.d/zabbix-agent restart
